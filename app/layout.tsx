@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Huzaifa Video Chat Demo",
-  description: "A modern, real-time dashboard, chat, and call simulation app built with Next.js, TypeScript, and Tailwind CSS.",
+  description:
+    "A modern, real-time dashboard, chat, and call simulation app built with Next.js, TypeScript, and Tailwind CSS.",
   applicationName: "Huzaifa Video Chat Demo",
   themeColor: "#2563eb",
-  viewport: "width=device-width, initial-scale=1",
   icons: [
     { rel: "icon", url: "/favicon.ico" },
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 
